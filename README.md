@@ -21,13 +21,13 @@ A web application for interacting with Ethereum wallets:
 ## Setup Instructions
 
 ### Backend Setup
-1. Install dependencies: npm install express axios dotenv
-2. Create .env file: ALCHEMY_API_KEY=your-alchemy-key-here and PORT=5000
+1. Install the dependencies: npm install express axios dotenv
+2. Create the .env file: ALCHEMY_API_KEY=your-alchemy-key-here and PORT=5000
 3. Start the server: node server.js or with nodemon server.js
 
 ### Frontend Setup
-1. Install dependencies (check frontend/package.json)
-2. Create .env file: REACT_APP_ALCHEMY_API_KEY=your_alchemy_key
+1. Install the dependencies (check frontend/package.json)
+2. Create the .env file: REACT_APP_ALCHEMY_API_KEY=your_alchemy_key
 3. Start the React app: npm start
 
 ---
