@@ -1,0 +1,117 @@
+/* Dark Theme Styles */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Add this to your CSS */
+.dashboard-heading {
+  color: #ffffff;
+  font-weight: 450;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.balance-display {
+  color: #f8f9fa;
+  font-weight: 350;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.balance-amount {
+  color: #20c997;
+  font-weight: 400;
+}
+
+.balance-loading {
+  color: #adb5bd;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background-color: #3d5afe;
+  border-color: #3d5afe;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #304ffe;
+  border-color: #304ffe;
+  transform: translateY(-1px);
+}
+
+.alert-success {
+  background-color: #2e7d32;
+  border-color: #1b5e20;
+  color: #e0e0e0;
+}
+
+.alert-danger {
+  background-color: #c62828;
+  border-color: #b71c1c;
+  color: #e0e0e0;
+}
+
+.list-group {
+    margin-top: 5px;
+}
+
+.list-group-item {
+  background-color: #2d2d2d;
+  border-color: #3d3d3d;
+  color: #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #3d3d3d;
+}
+
+h1, h4 {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient background effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 30%, #1a237e, transparent 40%),
+              radial-gradient(circle at 90% 80%, #4a148c, transparent 40%);
+  z-index: -1;
+  opacity: 0.18;
+}
+
+/* Glow effect for connected wallet */
+.alert-success {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  box-shadow: 0 0 8px rgba(40, 125, 50, 0.5);
+}
+
+/* Transaction item styling */
+.transaction-item {
+  border-left: 3px solid #3d5afe;
+  margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin: 0 20px;
+  }
+}

@@ -1,0 +1,13 @@
+# Frontend
+frontend/.env
+frontend/node_modules/
+frontend/.env.local
+frontend/build/
+
+# Backend
+backend/.env
+backend/node_modules/
+
+# System files
+.DS_Store
+.env
