@@ -42,7 +42,6 @@ A web application for interacting with Ethereum wallets:
 - Minimal Dependencies
 - Validation First: Address validation in middleware
 - Parallel Fetching: Uses Promise.all() for efficient data retrieval
-- 
 
 ### Frontend Design (Styling Approach)
 - Bootstrap 5 for responsive layout
