@@ -7,9 +7,6 @@ import Web3 from 'web3';
 
 const WalletConnection = ({ account, setAccount, setBalance, setTransactions, setError }) => {
 
-  // Alchemy API endpoint URL
-  const url = `https://eth-mainnet.g.alchemy.com/v2/${process.env.REACT_APP_ALCHEMY_API_KEY}`;
-
   // Main wallet connection handler
   const connectWallet = async () => {
     try {
@@ -45,19 +42,8 @@ const WalletConnection = ({ account, setAccount, setBalance, setTransactions, se
       // This only returns the 10 most recent transactions SENT by the user
       // (Does not include transactions RECEIVED by the user)
       try {
-        const response = await axios.post(url, {
-          jsonrpc: "2.0",
-          method: "alchemy_getAssetTransfers",
-          params: [{
-            fromBlock: "0x0",
-            toBlock: "latest",
-            fromAddress: connectedAddress, // I tried using this add during testing "0x742d35Cc6634C0532925a3b844Bc454e4438f44e"
-            category: ["external", "internal", "erc20", "erc721", "erc1155"],
-            maxCount: "0xA",
-            order: "desc",
-            withMetadata: true // Better to show with the date
-          }],
-          id: 1
+        const response = await axios.post('/transaction', {
+          address: connectedAddress // Or hardcoded test address
         });
 
         // Check for API-level errors
@@ -65,9 +51,8 @@ const WalletConnection = ({ account, setAccount, setBalance, setTransactions, se
           throw new Error(response.data.error.message);
         }
 
-        const transfers = response.data.result.transfers || [];
-        // console.log(transfers);
-        setTransactions(transfers);
+        // console.log(response.data);
+        setTransactions(response.data.transfers);
 
       } catch(error) {
         console.error("Failed to fetch transactions:", error);
